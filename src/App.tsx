@@ -24,18 +24,7 @@ function App() {
       }}
     >
       <h3>Board Game</h3>
-      <ButtonsContainer>
-        <ButtonsComponent
-          onClick={handleChangePosition}
-          disable={position === 9}
-        >
-          Andar com usuário
-        </ButtonsComponent>
 
-        <ButtonsComponent onClick={handleReset} disable={position === 0}>
-          Reset
-        </ButtonsComponent>
-      </ButtonsContainer>
       <BoardComponent userPosition={position} />
     </div>
   );
