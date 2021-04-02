@@ -14,6 +14,7 @@ export const ContainerWorld = styled.div`
   justify-content: center;
   flex: 1;
   height: 80%;
+  flex-direction: column;
 `;
 
 export const Board = styled.div`
@@ -64,4 +65,12 @@ export const Modal = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+`;
+
+export const Keys = styled.div`
+  height: 10%;
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-between;
 `;

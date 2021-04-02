@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import PinUserComponent from "../PinUser/PinUser";
 
-import { ContainerWorld, World, Player, Modal } from "./styles";
+import { ContainerWorld, World, Player, Modal, Keys } from "./styles";
 
 const WorldComponent: React.FC = () => {
   const [userPosition, moveUser] = useState([5, 3]);
@@ -38,13 +38,23 @@ const WorldComponent: React.FC = () => {
     }
   }, [enemyPosition, userPosition]);
 
+  const handleLeft = () => {
+    if (userPosition[1] > 1) {
+      moveUser([userPosition[0], userPosition[1] - 1]);
+    }
+  };
+
+  const handleRight = () => {
+    if (userPosition[1] < 5) {
+      moveUser([userPosition[0], userPosition[1] + 1]);
+    }
+  };
+
   const onKeyDown = useCallback(
     (e) => {
       // Left
       if (e.keyCode === 37) {
-        if (userPosition[1] > 1) {
-          moveUser([userPosition[0], userPosition[1] - 1]);
-        }
+        handleLeft();
       }
       // Up
       // if (e.keyCode === 38) {
@@ -54,9 +64,7 @@ const WorldComponent: React.FC = () => {
       // }
       // Right
       if (e.keyCode === 39) {
-        if (userPosition[1] < 5) {
-          moveUser([userPosition[0], userPosition[1] + 1]);
-        }
+        handleRight();
       }
       // Down
       // if (e.keyCode === 40) {
@@ -89,6 +97,16 @@ const WorldComponent: React.FC = () => {
           <PinUserComponent type={img} />
         </Player>
       </World>
+      <Keys>
+        <button
+          onClick={handleLeft}
+          style={{ height: 50, width: 50, borderRadius: 25 }}
+        >{`<`}</button>
+        <button
+          onClick={handleRight}
+          style={{ height: 50, width: 50, borderRadius: 25 }}
+        >{`>`}</button>
+      </Keys>
 
       {gameOver && (
         <Modal>
