@@ -71,6 +71,6 @@ export const Keys = styled.div`
   height: 10%;
   display: flex;
   align-items: center;
-  width: 10%;
+  width: 50%;
   justify-content: space-between;
 `;
