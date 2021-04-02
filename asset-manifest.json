@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/boardgame/static/css/main.1a4f9fcb.chunk.css",
-    "main.js": "/boardgame/static/js/main.3bca32b1.chunk.js",
-    "main.js.map": "/boardgame/static/js/main.3bca32b1.chunk.js.map",
+    "main.js": "/boardgame/static/js/main.afb93095.chunk.js",
+    "main.js.map": "/boardgame/static/js/main.afb93095.chunk.js.map",
     "runtime-main.js": "/boardgame/static/js/runtime-main.2af9800a.js",
     "runtime-main.js.map": "/boardgame/static/js/runtime-main.2af9800a.js.map",
     "static/js/2.64b2e1f5.chunk.js": "/boardgame/static/js/2.64b2e1f5.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.2af9800a.js",
     "static/js/2.64b2e1f5.chunk.js",
     "static/css/main.1a4f9fcb.chunk.css",
-    "static/js/main.3bca32b1.chunk.js"
+    "static/js/main.afb93095.chunk.js"
   ]
 }
